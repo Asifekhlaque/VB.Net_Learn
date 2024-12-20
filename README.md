@@ -159,33 +159,139 @@ End If
 
 ### **3. Loops** 🔄  
 
-#### **For Loop**  
+
+## 🔄 **Types of Loops in VB.NET**  
+
+Loops are used to repeat a block of code multiple times. VB.NET provides different types of loops for various use cases:
+
+---
+
+#### 1. **For Loop** 🏃‍♂️
+
+The **For Loop** is used when the number of iterations is known beforehand. It repeats a block of code for a specified number of times.  
+
+**Syntax**:  
 ```vb.net
 For counter = startValue To endValue
     ' Code to execute
 Next
 ```
+
 **Example**:  
 ```vb.net
 For i = 1 To 5
-    Console.WriteLine("Iteration: " & i)
+    Console.WriteLine("Iteration: " & i)  ' 🖨️ Output: Iteration: 1, 2, 3, 4, 5
 Next
 ```
 
-#### **While Loop**  
+---
+
+#### 2. **For Each Loop** 🔄
+
+The **For Each Loop** is used to iterate through each element in an array or collection. It is ideal when you don't know the exact number of iterations and want to work with each element.  
+
+**Syntax**:  
+```vb.net
+For Each item In collection
+    ' Code to execute
+Next
+```
+
+**Example**:  
+```vb.net
+Dim fruits() As String = {"Apple", "Banana", "Cherry"}  ' 🍎🍌🍒 Array of fruits
+For Each fruit In fruits
+    Console.WriteLine(fruit)  ' 🖨️ Output: Apple, Banana, Cherry
+Next
+```
+
+---
+
+#### 3. **While Loop** ⏳
+
+The **While Loop** repeats a block of code as long as the given condition is `True`. It is useful when you don't know how many times the loop should run.  
+
+**Syntax**:  
 ```vb.net
 While condition
     ' Code to execute
 End While
 ```
+
 **Example**:  
 ```vb.net
 Dim count As Integer = 0
 While count < 3
-    Console.WriteLine("Count: " & count)
+    Console.WriteLine("Count: " & count)  ' 🖨️ Output: Count: 0, Count: 1, Count: 2
     count += 1
 End While
 ```
+
+---
+
+#### 4. **Do While Loop** 🔄⏳
+
+The **Do While Loop** executes the code first, and then checks the condition. It continues looping as long as the condition is `True`.  
+
+**Syntax**:  
+```vb.net
+Do
+    ' Code to execute
+Loop While condition
+```
+
+**Example**:  
+```vb.net
+Dim count As Integer = 0
+Do
+    Console.WriteLine("Count: " & count)  ' 🖨️ Output: Count: 0, Count: 1, Count: 2
+    count += 1
+Loop While count < 3
+```
+
+---
+
+#### 5. **Do Until Loop** ⏳🔄
+
+The **Do Until Loop** is similar to the `Do While Loop`, but it continues looping until the condition becomes `True` (i.e., it loops while the condition is `False`).  
+
+**Syntax**:  
+```vb.net
+Do
+    ' Code to execute
+Loop Until condition
+```
+
+**Example**:  
+```vb.net
+Dim count As Integer = 0
+Do
+    Console.WriteLine("Count: " & count)  ' 🖨️ Output: Count: 0, Count: 1, Count: 2
+    count += 1
+Loop Until count = 3
+```
+
+---
+
+#### 6. **Exit Loop (Exit For/Exit Do)** 🚪
+
+The **Exit Loop** statement allows you to immediately exit a loop before it finishes all its iterations. You can use it in any loop (For, While, Do).  
+
+**Example**:  
+```vb.net
+For i = 1 To 10
+    If i = 5 Then
+        Exit For  ' 🏃‍♂️ Exit the loop when i = 5
+    End If
+    Console.WriteLine(i)  ' 🖨️ Output: 1, 2, 3, 4
+Next
+```
+
+### 🧠 **Choosing the Right Loop**  
+- **For Loop**: When you know the exact number of iterations.  
+- **For Each Loop**: When you want to iterate through each element in a collection or array.  
+- **While Loop**: When you want to repeat the loop as long as a condition is true, but you don't know how many iterations beforehand.  
+- **Do While/Do Until Loop**: When you need the loop to execute at least once before checking the condition.
 
 ### **4. Functions and Subroutines** 🧩  
 
