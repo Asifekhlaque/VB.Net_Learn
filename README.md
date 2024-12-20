@@ -80,6 +80,52 @@ End Module
 
 ---
 
+## 📊 **Data Types in VB.NET**  
+
+---
+
+### 🔑 **Key Data Types**  
+
+| **Data Type**  | **Description**             | **Example**         | **Emoji**   |
+|-----------------|-----------------------------|---------------------|-------------|
+| **Integer**     | Stores whole numbers        | `Dim age As Integer = 25` | 🔢 |
+| **Double**      | Stores floating-point numbers | `Dim pi As Double = 3.14` | 🧮 |
+| **String**      | Stores text or characters   | `Dim name As String = "John"` | ✍️ |
+| **Boolean**     | Stores `True` or `False`    | `Dim isActive As Boolean = True` | ✅❌ |
+| **Char**        | Stores a single character   | `Dim letter As Char = "A"` | 🔤 |
+| **Date**        | Stores date and time values | `Dim today As Date = Now` | 📅 |
+| **Object**      | Can hold any data type      | `Dim anyValue As Object = "Hello"` | 🎭 |
+
+---
+
+### 💻 **Declaring Variables with Data Types**  
+In VB.NET, variables are declared using the `Dim` keyword, followed by the variable name and its data type.  
+
+**Syntax**:  
+```vb.net
+Dim variableName As DataType
+```
+
+**Examples**:  
+```vb.net
+Dim age As Integer = 25          ' 🔢 Stores whole numbers
+Dim name As String = "Alice"     ' ✍️ Stores text
+Dim pi As Double = 3.14159       ' 🧮 Stores floating-point numbers
+Dim isActive As Boolean = True   ' ✅ Stores true/false values
+Dim letter As Char = "A"         ' 🔤 Stores a single character
+```
+
+---
+
+### 🌟 **Choosing the Right Data Type**  
+- Use **Integer** for whole numbers.  
+- Use **Double** for precise decimal values.  
+- Use **String** for text.  
+- Use **Boolean** for conditions (`True` or `False`).  
+- Use **Date** for working with date and time.  
+
+---
+
 ## **Basic Syntax of VB.NET** ✍️  
 
 ### **1. Declaring Variables** 💾  
