@@ -15,6 +15,8 @@
 
 ## **🌟 Key Components of the .NET Framework**  
 
+![image](https://github.com/user-attachments/assets/a3ac42a8-a5bf-43b2-9a67-aa946322bbf3)
+
 
 1. **Common Language Runtime (CLR)** ⚙️  
    - Executes .NET applications, managing memory, execution, and error handling.  
