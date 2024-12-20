@@ -2,7 +2,7 @@
 
 ---
 
-## **VB.NET in 6 Points** 🧠  
+## **VB.NET** 🧠  
 
 1. **Easy to Learn** 🧠: VB.NET has a simple, English-like syntax, making it beginner-friendly.  
 2. **Object-Oriented** 💡: Supports object-oriented programming, enabling organized and reusable code.  
