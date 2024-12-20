@@ -927,3 +927,176 @@ Console.WriteLine(obj1 IsNot obj2) ' 🖨️ Output: True
 - **Assignment operators** modify the value of a variable.
 - **String operators** combine strings.
 - **Identity operators** compare references of objects.
+
+---
+
+## 🧩 **OOP Concepts in VB.NET**  
+
+### 1. **Classes and Objects** 🏠
+
+- **Class**: A blueprint or template for creating objects.
+- **Object**: An instance of a class.
+
+A class defines properties and methods, while an object is a specific instance of that class.
+
+**Example**:  
+```vb.net
+Class Person
+    ' Properties
+    Public Name As String
+    Public Age As Integer
+
+    ' Method
+    Public Sub Greet()
+        Console.WriteLine("Hello, my name is " & Name)
+    End Sub
+End Class
+
+' Creating an object
+Dim person1 As New Person()
+person1.Name = "John"
+person1.Age = 30
+person1.Greet()  ' 🖨️ Output: Hello, my name is John
+```
+
+---
+
+### 2. **Encapsulation** 🔒
+
+Encapsulation is the concept of hiding the internal workings of an object and providing access to the object’s data only through methods or properties.
+
+**Example**:  
+```vb.net
+Class Person
+    ' Private field (hidden from outside)
+    Private _age As Integer
+
+    ' Property for controlled access to the private field
+    Public Property Age As Integer
+        Get
+            Return _age
+        End Get
+        Set(value As Integer)
+            If value >= 0 Then
+                _age = value
+            End If
+        End Set
+    End Property
+End Class
+
+Dim person1 As New Person()
+person1.Age = 30  ' 🖨️ Valid input
+Console.WriteLine(person1.Age)  ' 🖨️ Output: 30
+```
+
+---
+
+### 3. **Inheritance** 🧬
+
+Inheritance allows a class to inherit properties and methods from another class, promoting code reuse and logical hierarchies.
+
+**Example**:  
+```vb.net
+Class Animal
+    Public Sub Speak()
+        Console.WriteLine("Animal speaks")
+    End Sub
+End Class
+
+Class Dog
+    Inherits Animal  ' Inheriting from Animal
+
+    Public Sub Bark()
+        Console.WriteLine("Dog barks")
+    End Sub
+End Class
+
+' Creating object of Dog class
+Dim dog1 As New Dog()
+dog1.Speak()  ' 🖨️ Output: Animal speaks
+dog1.Bark()   ' 🖨️ Output: Dog barks
+```
+
+---
+
+### 4. **Polymorphism** 🔄
+
+Polymorphism allows different classes to define methods with the same name but different behaviors. It can be achieved using method overriding or interfaces.
+
+**Example** (Method Overriding):  
+```vb.net
+Class Animal
+    Public Overridable Sub Speak()
+        Console.WriteLine("Animal speaks")
+    End Sub
+End Class
+
+Class Dog
+    Inherits Animal
+
+    Public Overrides Sub Speak()
+        Console.WriteLine("Dog barks")
+    End Sub
+End Class
+
+Dim dog1 As New Dog()
+dog1.Speak()  ' 🖨️ Output: Dog barks
+```
+
+---
+
+### 5. **Abstraction** 💡
+
+Abstraction hides complex implementation details and shows only the necessary parts of the object. It can be achieved using abstract classes or interfaces.
+
+**Example** (Abstract Class):  
+```vb.net
+MustInherit Class Animal
+    Public MustOverride Sub Speak()
+End Class
+
+Class Dog
+    Inherits Animal
+
+    Public Overrides Sub Speak()
+        Console.WriteLine("Dog barks")
+    End Sub
+End Class
+
+Dim dog1 As New Dog()
+dog1.Speak()  ' 🖨️ Output: Dog barks
+```
+
+---
+
+### 6. **Interfaces** 🔗
+
+An interface defines a contract that a class must follow, specifying which methods or properties it must implement.
+
+**Example**:  
+```vb.net
+Interface IAnimal
+    Sub Speak()
+End Interface
+
+Class Dog
+    Implements IAnimal
+
+    Public Sub Speak() Implements IAnimal.Speak
+        Console.WriteLine("Dog barks")
+    End Sub
+End Class
+
+Dim dog1 As New Dog()
+dog1.Speak()  ' 🖨️ Output: Dog barks
+```
+
+---
+
+### 🌟 **Summary of OOP Concepts**  
+- **Classes & Objects**: Classes define objects; objects are instances of classes.
+- **Encapsulation**: Hiding implementation details and exposing only necessary parts.
+- **Inheritance**: A class can inherit properties and methods from another class.
+- **Polymorphism**: Methods can have different behaviors in different classes.
+- **Abstraction**: Hiding complex details and exposing only essential functionality.
+- **Interfaces**: Defines a contract that classes must follow.
