@@ -1203,3 +1203,132 @@ car2.DisplayInfo()  ' 🖨️ Output: Car Model: BMW, Year: 2021, Color: Red
 - Ensures objects are **ready to use** when created. ✅  
 - Initializes object properties automatically. ⚙️  
 - Makes code **cleaner** and **easier to manage**. ✨
+
+
+### **Exception Handling in VB.NET** ⚠️
+
+**What is Exception Handling?**  
+Exception handling helps manage errors or unexpected issues that may occur while your program is running. It helps to **catch** errors, **handle** them gracefully, and **avoid** program crashes. 🛡️
+
+---
+
+### **Basic Structure of Exception Handling** 🏗️
+
+```vb.net
+Try
+    ' Code that might throw an exception
+Catch ex As Exception
+    ' Code that runs if an exception occurs
+Finally
+    ' Code that runs regardless of whether there was an exception or not
+End Try
+```
+
+---
+
+### **Example** 👨‍💻
+
+```vb.net
+Module Program
+    Sub Main()
+        Try
+            ' Code that could cause an error
+            Dim result As Integer = 10 / 0 ' Division by zero
+        Catch ex As DivideByZeroException
+            ' Handle the specific error
+            Console.WriteLine("Error: Division by zero is not allowed!")  ' 🛑
+        Catch ex As Exception
+            ' Handle any other errors
+            Console.WriteLine("An error occurred: " & ex.Message)  ' 💥
+        Finally
+            ' This code runs no matter what (even if there was an error)
+            Console.WriteLine("This will always run.")
+        End Try
+    End Sub
+End Module
+```
+
+---
+
+### **Explanation** 📝
+
+1. **Try**: This block contains the code that might cause an error. You write the code you expect to run here.
+2. **Catch**: If an error happens, the catch block handles the error. You can catch specific types of exceptions (like `DivideByZeroException`) or catch any general exception.
+3. **Finally**: This block always runs, whether an error occurred or not. It’s often used for cleanup (like closing files or database connections).
+
+---
+
+### **Types of Exceptions** ⚠️
+
+1. **DivideByZeroException** ❌  
+   Happens when trying to divide by zero.
+   
+2. **FileNotFoundException** 📂  
+   Happens if the file you try to open doesn't exist.
+
+3. **NullReferenceException** 🔄  
+   Occurs when you try to use an object that is `Nothing` (null).
+
+4. **ArgumentOutOfRangeException** 🚫  
+   Happens when you provide a value that's out of range (e.g., an invalid index in an array).
+
+---
+
+### **Why Use Exception Handling?** 🤔
+
+- **Prevent program crashes**: Handles errors without stopping the program unexpectedly.  
+- **Graceful error messages**: Provides helpful messages to the user.  
+- **Better debugging**: Helps track errors and fix them efficiently.  
+
+---
+
+### **Custom Exception in VB.NET** 🛠️
+
+A **custom exception** allows you to create your own error message when something goes wrong in your program.
+
+---
+
+### **Simple Example** 🌟
+
+```vb.net
+' Create a custom exception
+Public Class AgeException
+    Inherits Exception
+    Public Sub New()
+        MyBase.New("Age must be 18 or older!")
+    End Sub
+End Class
+
+Module Program
+    Sub Main()
+        Try
+            Dim age As Integer = 15 ' Invalid age
+            If age < 18 Then
+                Throw New AgeException() ' Throw custom exception
+            End If
+            Console.WriteLine("Age is valid!")
+        Catch ex As AgeException
+            ' Show custom error message
+            Console.WriteLine(ex.Message)
+        End Try
+    End Sub
+End Module
+```
+
+---
+
+### **Explanation** 📝
+
+- **Custom Exception**: `AgeException` is our own error message class.
+- **Throwing the Error**: If the age is less than 18, we "throw" the custom error.
+- **Catching the Error**: We show the custom message when the error happens.
+
+---
+
+### **Example Output** 🖨️
+
+```
+Age must be 18 or older!
+```
+
+---
