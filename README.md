@@ -186,10 +186,6 @@ End Module
 
 - **Compatibility**: Ensures compatibility between different data types in calculations and operations.
 - **Data Conversion**: Helps convert values between different formats or types to meet program requirements.
-
-## 📦 **Namespaces in VB.NET**  
-
-A **Namespace** is a container that holds classes, interfaces, structures, and other namespaces. It helps organize code and avoids naming conflicts by grouping related types together. Namespaces allow you to use the same class names in different parts of the program without causing clashes.
  
 **What is Implicit Conversion?**  🔄
 Implicit conversion occurs when VB.NET automatically converts one data type to another without requiring the programmer to intervene. However, this conversion is only allowed when the **Option Strict** switch is off. If **Option Strict** is turned on, the compiler enforces strict type checking, preventing automatic conversion between incompatible types.
@@ -253,6 +249,10 @@ End Module
 - **Best Practice**: It is recommended to use **Option Strict On** for more predictable and safer code.
 
 ---
+
+## 📦 **Namespaces in VB.NET**  
+
+A **Namespace** is a container that holds classes, interfaces, structures, and other namespaces. It helps organize code and avoids naming conflicts by grouping related types together. Namespaces allow you to use the same class names in different parts of the program without causing clashes.
 
 ### 1. **Declaring a Namespace** 🏷️  
 
