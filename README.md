@@ -1,7 +1,5 @@
 # **VB.Net_Learn** 🚀  
 
-![VB.NET Banner](https://via.placeholder.com/1200x400.png?text=Welcome+to+VB.NET+Learning)  
-
 ---
 
 ## **VB.NET in 6 Points** 🧠  
@@ -17,7 +15,6 @@
 
 ## **🌟 Key Components of the .NET Framework**  
 
-![.NET Framework Diagram](https://via.placeholder.com/1200x400.png?text=.NET+Framework+Components)  
 
 1. **Common Language Runtime (CLR)** ⚙️  
    - Executes .NET applications, managing memory, execution, and error handling.  
