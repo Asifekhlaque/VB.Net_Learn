@@ -776,3 +776,154 @@ Console.WriteLine(str1 = str2)  ' 🖨️ Output: False
 - Strings are fundamental for handling text data.
 - You can manipulate strings using various methods like `Substring()`, `Replace()`, `ToUpper()`, and more.
 - String interpolation makes it easy to work with variables inside strings.
+---
+
+## 🔧 **Operators in VB.NET**  
+
+Operators are symbols used to perform operations on variables and values. They help perform tasks like arithmetic calculations, comparisons, and logical operations. VB.NET provides a wide range of operators to make programming easier and more efficient.
+
+---
+
+### 1. **Arithmetic Operators** ➗  
+
+Arithmetic operators perform basic mathematical operations.
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `+`      | Addition    | `5 + 3 = 8` |
+| `-`      | Subtraction | `5 - 3 = 2` |
+| `*`      | Multiplication | `5 * 3 = 15` |
+| `/`      | Division    | `5 / 3 = 1.6667` |
+| `\`      | Integer Division | `5 \ 3 = 1` |
+| `Mod`    | Remainder (Modulus) | `5 Mod 3 = 2` |
+
+**Example**:  
+```vb.net
+Dim x As Integer = 5
+Dim y As Integer = 3
+Console.WriteLine(x + y)  ' 🖨️ Output: 8
+Console.WriteLine(x - y)  ' 🖨️ Output: 2
+Console.WriteLine(x * y)  ' 🖨️ Output: 15
+Console.WriteLine(x / y)  ' 🖨️ Output: 1.6667
+Console.WriteLine(x Mod y)  ' 🖨️ Output: 2
+```
+
+---
+
+### 2. **Comparison Operators** ⚖️  
+
+Comparison operators are used to compare two values.
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `=`      | Equal to    | `5 = 3` returns `False` |
+| `<>`     | Not equal to| `5 <> 3` returns `True` |
+| `>`      | Greater than | `5 > 3` returns `True` |
+| `<`      | Less than   | `5 < 3` returns `False` |
+| `>=`     | Greater than or equal to | `5 >= 3` returns `True` |
+| `<=`     | Less than or equal to | `5 <= 3` returns `False` |
+
+**Example**:  
+```vb.net
+Dim x As Integer = 5
+Dim y As Integer = 3
+Console.WriteLine(x = y)   ' 🖨️ Output: False
+Console.WriteLine(x <> y)  ' 🖨️ Output: True
+Console.WriteLine(x > y)   ' 🖨️ Output: True
+Console.WriteLine(x < y)   ' 🖨️ Output: False
+Console.WriteLine(x >= y)  ' 🖨️ Output: True
+Console.WriteLine(x <= y)  ' 🖨️ Output: False
+```
+
+---
+
+### 3. **Logical Operators** 🧠  
+
+Logical operators are used to perform logical operations, commonly used in decision-making and control flow.
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `And`    | Returns `True` if both expressions are `True` | `(x > 3) And (y < 5)` |
+| `Or`     | Returns `True` if at least one expression is `True` | `(x > 3) Or (y < 5)` |
+| `Not`    | Reverses the logical value (True becomes False, and vice versa) | `Not (x > 3)` |
+
+**Example**:  
+```vb.net
+Dim x As Integer = 5
+Dim y As Integer = 3
+Console.WriteLine((x > 3) And (y < 5))  ' 🖨️ Output: True
+Console.WriteLine((x > 3) Or (y > 5))   ' 🖨️ Output: True
+Console.WriteLine(Not (x > 3))           ' 🖨️ Output: False
+```
+
+---
+
+### 4. **Assignment Operators** ➡️  
+
+Assignment operators are used to assign values to variables.
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `=`      | Assigns a value to a variable | `x = 5` |
+| `+=`     | Adds and assigns a value to a variable | `x += 3` (equivalent to `x = x + 3`) |
+| `-=`     | Subtracts and assigns a value to a variable | `x -= 3` (equivalent to `x = x - 3`) |
+| `*=`     | Multiplies and assigns a value to a variable | `x *= 3` (equivalent to `x = x * 3`) |
+| `/=`     | Divides and assigns a value to a variable | `x /= 3` (equivalent to `x = x / 3`) |
+| `\=`     | Integer divides and assigns a value to a variable | `x \= 3` (equivalent to `x = x \ 3`) |
+
+**Example**:  
+```vb.net
+Dim x As Integer = 5
+x += 3  ' 🖨️ Output: x becomes 8
+x -= 2  ' 🖨️ Output: x becomes 6
+x *= 4  ' 🖨️ Output: x becomes 24
+x /= 6  ' 🖨️ Output: x becomes 4
+```
+
+---
+
+### 5. **String Operators** 💬  
+
+String operators are used to manipulate and combine strings.
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `&`      | Concatenates two strings | `"Hello" & " World"` |
+| `+`      | Concatenates two strings (same as `&` in VB.NET) | `"Hello" + " World"` |
+
+**Example**:  
+```vb.net
+Dim greeting As String = "Hello"
+Dim name As String = "John"
+Console.WriteLine(greeting & " " & name)  ' 🖨️ Output: Hello John
+Console.WriteLine(greeting + " " + name)  ' 🖨️ Output: Hello John
+```
+
+---
+
+### 6. **Identity and Type Operators** 🆔  
+
+Identity operators are used to compare the reference of objects.
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `Is`     | Checks if two object references refer to the same object | `x Is y` |
+| `IsNot`  | Checks if two object references do not refer to the same object | `x IsNot y` |
+
+**Example**:  
+```vb.net
+Dim obj1 As New Object()
+Dim obj2 As New Object()
+Console.WriteLine(obj1 Is obj2)    ' 🖨️ Output: False
+Console.WriteLine(obj1 IsNot obj2) ' 🖨️ Output: True
+```
+
+---
+
+### 🌟 **Key Takeaways**  
+- **Arithmetic operators** help perform basic math operations.
+- **Comparison operators** compare values and return `True` or `False`.
+- **Logical operators** combine multiple conditions.
+- **Assignment operators** modify the value of a variable.
+- **String operators** combine strings.
+- **Identity operators** compare references of objects.
