@@ -126,6 +126,154 @@ Dim letter As Char = "A"         ' 🔤 Stores a single character
 
 ---
 
+## 📦 **Namespaces in VB.NET**  
+
+A **Namespace** is a container that holds classes, interfaces, structures, and other namespaces. It helps organize code and avoids naming conflicts by grouping related types together. Namespaces allow you to use the same class names in different parts of the program without causing clashes.
+
+---
+
+### 1. **Declaring a Namespace** 🏷️  
+
+To declare a namespace, use the `Namespace` keyword followed by the name of the namespace. Inside the namespace, you define your classes, modules, or other components.
+
+**Syntax**:  
+```vb.net
+Namespace NamespaceName
+    ' Code goes here
+End Namespace
+```
+
+**Example**:  
+```vb.net
+Namespace MyNamespace
+    Class MyClass
+        Sub Greet()
+            Console.WriteLine("Hello from MyNamespace!")
+        End Sub
+    End Class
+End Namespace
+```
+
+---
+
+### 2. **Using a Namespace** ⚡  
+
+Once a namespace is declared, you can use the classes or functions inside it by referencing the namespace. This is done using the `Imports` statement at the beginning of your code.
+
+**Syntax**:  
+```vb.net
+Imports NamespaceName
+```
+
+**Example**:  
+```vb.net
+Imports MyNamespace
+
+Module Program
+    Sub Main()
+        Dim obj As New MyClass()
+        obj.Greet()  ' 🖨️ Output: Hello from MyNamespace!
+    End Sub
+End Module
+```
+
+---
+
+### 3. **Nested Namespaces** 🔁  
+
+Namespaces can also be nested inside other namespaces. This allows for better organization, especially in larger programs.
+
+**Syntax**:  
+```vb.net
+Namespace OuterNamespace
+    Namespace InnerNamespace
+        ' Code goes here
+    End Namespace
+End Namespace
+```
+
+**Example**:  
+```vb.net
+Namespace OuterNamespace
+    Namespace InnerNamespace
+        Class MyClass
+            Sub DisplayMessage()
+                Console.WriteLine("Message from Nested Namespace!")
+            End Sub
+        End Class
+    End Namespace
+End Namespace
+```
+
+---
+
+### 4. **Using Fully Qualified Names** 📍  
+
+To avoid naming conflicts, you can refer to a class using its fully qualified name, which includes the namespace and class name.
+
+**Syntax**:  
+```vb.net
+NamespaceName.ClassName
+```
+
+**Example**:  
+```vb.net
+Module Program
+    Sub Main()
+        Dim obj As New MyNamespace.MyClass()
+        obj.Greet()  ' 🖨️ Output: Hello from MyNamespace!
+    End Sub
+End Module
+```
+
+---
+
+### 5. **System Namespace** 🌐  
+
+The **System** namespace is the root namespace in the .NET Framework and contains fundamental classes for working with data types, collections, file I/O, and more.
+
+**Example**:  
+```vb.net
+Imports System
+
+Module Program
+    Sub Main()
+        Console.WriteLine("Welcome to the System namespace!")  ' 🖨️ Output: Welcome to the System namespace!
+    End Sub
+End Module
+```
+
+---
+
+### 6. **Common Namespaces in VB.NET** 🔑  
+
+Some commonly used namespaces in VB.NET are:
+
+- **System**: Contains fundamental classes like `String`, `Console`, and `DateTime`.
+- **System.IO**: Used for file and stream handling.
+- **System.Collections**: Provides classes like `List`, `Dictionary`, and `ArrayList` for working with collections.
+- **System.Linq**: Provides classes and methods for Language-Integrated Query (LINQ).
+- **System.Net**: For working with networking protocols like HTTP, FTP, etc.
+
+**Example**:  
+```vb.net
+Imports System.IO
+
+Module Program
+    Sub Main()
+        Dim fileContent As String = File.ReadAllText("example.txt")
+        Console.WriteLine(fileContent)  ' 🖨️ Output: Content from example.txt
+    End Sub
+End Module
+```
+
+---
+
+### 🌟 **Key Takeaways**  
+- Namespaces help organize code and avoid name conflicts.
+- Use the `Imports` statement to use types defined in a namespace.
+- Nested namespaces and fully qualified names allow for better code management.
+
 ## **Basic Syntax of VB.NET** ✍️  
 
 ### **1. Declaring Variables** 💾  
