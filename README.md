@@ -154,3 +154,21 @@ Console.WriteLine("Your message here")
 ```vb.net
 Console.WriteLine("Welcome to VB.NET!")
 ```
+Here’s how you can format your GitHub README file with emojis to make it engaging:  
+
+---
+
+### 🌟 **Get User Input in VB.NET**  
+
+### **7. For Console Applications** 💻  
+Here’s an example of how to get input from the user in a VB.NET console application:  
+
+```vb.net
+Module Program
+    Sub Main()
+        Console.Write("Enter your name: ") ' 🖊️ Prompt the user
+        Dim name As String = Console.ReadLine() ' 📥 Read input from the user
+        Console.WriteLine("Hello, " & name & "!") ' 🎉 Display the result
+    End Sub
+End Module
+```
