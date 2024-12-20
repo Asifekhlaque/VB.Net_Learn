@@ -125,6 +125,65 @@ Dim letter As Char = "A"         ' 🔤 Stores a single character
 - Use **Date** for working with date and time.  
 
 ---
+### **Type Casting in VB.NET** 🔄
+
+**What is Type Casting?**  
+Type casting is the process of converting one data type to another. It can be done **implicitly** (automatically) or **explicitly** (manually). This helps ensure compatibility between different data types in operations.
+
+---
+
+### **Implicit Type Casting** 🤖
+
+Implicit casting happens automatically when VB.NET can safely convert one data type to another. This usually happens when converting a smaller data type to a larger one (e.g., `Integer` to `Double`).
+
+```vb.net
+Module Program
+    Sub Main()
+        Dim intValue As Integer = 10
+        Dim doubleValue As Double
+
+        ' Implicit Type Casting
+        doubleValue = intValue ' Integer is automatically converted to Double
+
+        Console.WriteLine("Double Value: " & doubleValue) ' Output: 10.0
+    End Sub
+End Module
+```
+
+---
+
+### **Explicit Type Casting** 🛠️
+
+Explicit casting requires you to manually convert one data type to another using the `CType` function or other casting methods.
+
+```vb.net
+Module Program
+    Sub Main()
+        Dim doubleValue As Double = 10.5
+        Dim intValue As Integer
+
+        ' Explicit Type Casting
+        intValue = CType(doubleValue, Integer) ' Manually cast Double to Integer
+
+        Console.WriteLine("Integer Value: " & intValue) ' Output: 10 (fraction part is discarded)
+    End Sub
+End Module
+```
+
+---
+
+### **Key Points to Remember** 📝
+
+1. **Implicit Casting**: Happens automatically when there’s no risk of losing data (smaller to larger types).
+2. **Explicit Casting**: Done manually using `CType`, `CInt`, `CDbl`, etc., when there’s a risk of data loss (e.g., converting a `Double` to `Integer`).
+3. **Type Safety**: Always ensure that the conversion is valid to avoid runtime errors.
+
+---
+
+### **Why Use Type Casting?** 🤔
+
+- **Compatibility**: Ensures compatibility between different data types in calculations and operations.
+- **Data Conversion**: Helps convert values between different formats or types to meet program requirements.
 
 ## 📦 **Namespaces in VB.NET**  
 
