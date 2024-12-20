@@ -154,9 +154,6 @@ Console.WriteLine("Your message here")
 ```vb.net
 Console.WriteLine("Welcome to VB.NET!")
 ```
-Here’s how you can format your GitHub README file with emojis to make it engaging:  
-
----
 
 ### 🌟 **Get User Input in VB.NET**  
 
