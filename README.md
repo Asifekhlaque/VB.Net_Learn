@@ -1222,6 +1222,115 @@ dog1.Speak()  ' 🖨️ Output: Dog barks
 - **Interfaces**: Defines a contract that classes must follow.
 ---
 
+### **What are Access Specifiers?** 🔒 
+Access specifiers are keywords that define the visibility and accessibility of classes, methods, variables, and other members in a program. They help control how other parts of your program (or other programs) can access certain members.
+
+There are four main access specifiers in VB.NET:
+
+---
+
+### **1. Public** 🌍
+
+- **Visibility**: Accessible from anywhere, inside or outside the class or module.
+- **Use**: Used when you want the members to be fully accessible.
+
+**Example**:
+```vb.net
+Public Class Person
+    Public Name As String ' Accessible from anywhere
+End Class
+```
+
+**Access**:
+```vb.net
+Dim person As New Person()
+person.Name = "John"  ' This is allowed since Name is public
+```
+
+---
+
+### **2. Private** 🔒
+
+- **Visibility**: Accessible only within the same class or module. It cannot be accessed outside of it.
+- **Use**: Used to protect data and hide implementation details from other parts of the program.
+
+**Example**:
+```vb.net
+Public Class Person
+    Private Age As Integer ' Accessible only within the class
+End Class
+```
+
+**Access**:
+```vb.net
+Dim person As New Person()
+person.Age = 30  ' Error: Age is private and cannot be accessed directly
+```
+
+---
+
+### **3. Protected** 🛡️
+
+- **Visibility**: Accessible within the same class and by derived (child) classes. It’s a mix of public and private access.
+- **Use**: Typically used when you want to allow derived classes to access a member, but not other classes.
+
+**Example**:
+```vb.net
+Public Class Person
+    Protected Age As Integer ' Accessible in this class and its derived classes
+End Class
+
+Public Class Employee
+    Inherits Person
+    Public Sub ShowAge()
+        Me.Age = 30  ' Allowed since Age is protected in the base class
+    End Sub
+End Class
+```
+
+**Access**:
+```vb.net
+Dim employee As New Employee()
+employee.ShowAge()  ' Allowed
+```
+
+---
+
+### **4. Friend** 🏠 (Also known as "Internal" in some languages)
+
+- **Visibility**: Accessible within the same assembly (project) but not outside of it.
+- **Use**: Allows access within the same project but hides it from other projects.
+
+**Example**:
+```vb.net
+Public Class Person
+    Friend Address As String ' Accessible only within the same assembly
+End Class
+```
+
+**Access**:
+```vb.net
+Dim person As New Person()
+person.Address = "123 Main St"  ' Allowed since Address is friend and in the same project
+```
+
+---
+
+### **Summary** 📝
+
+| Access Specifier | Visibility | When to Use |
+|------------------|------------|-------------|
+| **Public**       | Everywhere | Use for widely accessible members |
+| **Private**      | Inside the class/module only | Use for internal details that should not be accessed externally |
+| **Protected**    | Inside the class and derived classes | Use for members that should be accessible by derived classes |
+| **Friend**       | Same assembly | Use for members that should be accessed within the same project |
+
+### **Best Practices** 💡
+- **Use `Private`** for variables that should not be changed directly (encapsulation).
+- **Use `Public`** for methods or properties that need to be accessed globally.
+- **Use `Protected`** to allow derived classes to access base class members.
+- **Use `Friend`** for components that are only relevant to your project and shouldn't be accessed externally.
+---
 ### **Constructor in VB.NET** 🏗️
 
 1. **What is a Constructor?**  
