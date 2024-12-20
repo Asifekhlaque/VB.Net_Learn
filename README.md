@@ -42,6 +42,44 @@
 
 ---
 
+## 📚 **Basic Code Structure in VB.NET**  
+
+VB.NET programs have a clear and structured format. Below is a simple example and explanation of its components:  
+
+```vb.net
+Module Program ' 🏗️ Defines a module
+    Sub Main() ' 🚪 Entry point of the program
+        ' 👋 This is a single-line comment
+        Console.WriteLine("Hello, World!") ' 🖨️ Prints output to the console
+    End Sub
+End Module
+```
+
+---
+
+### 🔍 **Explanation of Code Structure**  
+
+1. **Module** 🏗️  
+   - A container that groups related code together.  
+   - Syntax: `Module ModuleName`.  
+
+2. **Main Method** 🚪  
+   - The entry point where the program starts execution.  
+   - Syntax: `Sub Main()` and `End Sub`.  
+
+3. **Statements** 🖨️  
+   - Instructions written inside the `Main` method.  
+   - Example: `Console.WriteLine("Hello, World!")` displays text on the screen.  
+
+4. **Comments** ✍️  
+   - Single-line comment: Starts with `'`.  
+   - Example: `' This is a single-line comment`.  
+
+5. **End Statements** ✅  
+   - `End Module` is used to indicate the end of the module definition.  
+
+---
+
 ## **Basic Syntax of VB.NET** ✍️  
 
 ### **1. Declaring Variables** 💾  
