@@ -1100,3 +1100,106 @@ dog1.Speak()  ' 🖨️ Output: Dog barks
 - **Polymorphism**: Methods can have different behaviors in different classes.
 - **Abstraction**: Hiding complex details and exposing only essential functionality.
 - **Interfaces**: Defines a contract that classes must follow.
+---
+
+### **Constructor in VB.NET** 🏗️
+
+1. **What is a Constructor?**  
+A **constructor** is a special method that runs when you create an object. It's used to set up initial values for the object. 🛠️
+
+**Example**:  
+```vb.net
+Class Car
+    ' Fields
+    Public Model As String
+    Public Year As Integer
+
+    ' Constructor
+    Public Sub New(model As String, year As Integer)
+        Me.Model = model  ' Set the model
+        Me.Year = year    ' Set the year
+    End Sub
+
+    ' Method to display car details
+    Public Sub DisplayInfo()
+        Console.WriteLine("Car Model: " & Model)
+        Console.WriteLine("Year: " & Year)
+    End Sub
+End Class
+
+' Creating an object and calling the constructor
+Dim myCar As New Car("Toyota", 2022)
+myCar.DisplayInfo()  ' 🖨️ Output: Car Model: Toyota, Year: 2022
+```
+
+---
+
+2. **Default Constructor**  
+If no constructor is written, VB.NET gives the object default values like `0` for numbers and `Nothing` for objects. 🧑‍💻
+
+**Example**:  
+```vb.net
+Class Car
+    Public Model As String
+    Public Year As Integer
+
+    ' Method to display car details
+    Public Sub DisplayInfo()
+        Console.WriteLine("Car Model: " & Model)
+        Console.WriteLine("Year: " & Year)
+    End Sub
+End Class
+
+' Creating an object without constructor (using default values)
+Dim myCar As New Car()
+myCar.DisplayInfo()  ' 🖨️ Output: Car Model: , Year: 0 (default values)
+```
+
+---
+
+3. **Constructor Overloading** 🔄  
+You can create multiple constructors with different parameters. This is called **constructor overloading**.
+
+**Example**:  
+```vb.net
+Class Car
+    Public Model As String
+    Public Year As Integer
+    Public Color As String
+
+    ' Constructor with two parameters
+    Public Sub New(model As String, year As Integer)
+        Me.Model = model
+        Me.Year = year
+    End Sub
+
+    ' Constructor with three parameters (overloaded)
+    Public Sub New(model As String, year As Integer, color As String)
+        Me.Model = model
+        Me.Year = year
+        Me.Color = color
+    End Sub
+
+    Public Sub DisplayInfo()
+        Console.WriteLine("Car Model: " & Model)
+        Console.WriteLine("Year: " & Year)
+        If Not String.IsNullOrEmpty(Color) Then
+            Console.WriteLine("Color: " & Color)
+        End If
+    End Sub
+End Class
+
+' Creating objects with different constructors
+Dim car1 As New Car("Honda", 2020)
+car1.DisplayInfo()  ' 🖨️ Output: Car Model: Honda, Year: 2020
+
+Dim car2 As New Car("BMW", 2021, "Red")
+car2.DisplayInfo()  ' 🖨️ Output: Car Model: BMW, Year: 2021, Color: Red
+```
+
+---
+
+### **Why Use Constructors?**  
+- Ensures objects are **ready to use** when created. ✅  
+- Initializes object properties automatically. ⚙️  
+- Makes code **cleaner** and **easier to manage**. ✨
